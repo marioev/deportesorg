@@ -3,131 +3,213 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>deportesorg</title>
+        <title>Deportes Org.</title>
         <!-- Tell the browser to be responsive to screen width -->
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap 3.3.6 -->
         <link rel="stylesheet" href="<?php echo site_url('resources/css/bootstrap.min.css');?>">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="<?php echo site_url('resources/css/font-awesome.min.css');?>">
+        <link rel="stylesheet" href="<?php echo site_url('resources/fonts/fontawesome-free/css/all.min.css');?>">
         <!-- Ionicons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-        <!-- Datetimepicker -->
-        <link rel="stylesheet" href="<?php echo site_url('resources/css/bootstrap-datetimepicker.min.css');?>">
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo site_url('resources/css/AdminLTE.min.css');?>">
+        <!-- iCheck -->
+        <link rel="stylesheet" href="<?php echo site_url('resources/plugins/icheck-bootstrap/icheck-bootstrap.min.css');?>"> 
+        <!-- JQVMap -->
+        <link rel="stylesheet" href="<?php echo site_url('resources/plugins/jqvmap/jqvmap.min.css');?>">
+     
+        <!-- overlayScrollbars -->
+        <link rel="stylesheet" href="<?php echo site_url('resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css');?>">
+        <!-- Daterange picker -->
+        <link rel="stylesheet" href="<?php echo site_url('resources/plugins/daterangepicker/daterangepicker.css');?>">
+        <!-- summernote -->
+        <link rel="stylesheet" href="<?php echo site_url('resources/plugins/summernote/summernote-bs4.css');?>">
         <!-- AdminLTE Skins. Choose a skin from the css/skins
-             folder instead of downloading all of them to reduce the load. -->
-        <link rel="stylesheet" href="<?php echo site_url('resources/css/_all-skins.min.css');?>">
+             folder instead of downloading all of them to reduce the load. 
+        <link rel="stylesheet" href="<?php /*echo site_url('resources/css/_all-skins.min.css');*/?>">-->
+
+        <!-- Google Font: Source Sans Pro -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+ 
+      <!-- Font Awesome 
+      <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">-->
+      
+      <!-- Tempusdominus Bbootstrap 4 
+      <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">-->
+     
+     
     </head>
     
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
-            <header class="main-header">
-                <!-- Logo -->
-                <a href="" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini">deportesorg</span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg">deportesorg</span>
+                          <!-- Navbar -->
+          <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+              </li>
+              <li class="nav-item d-none d-sm-inline-block">
+                <a href="index3.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-3">
+              <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Messages Dropdown Menu -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                  <i class="far fa-comments"></i>
+                  <span class="badge badge-danger navbar-badge">3</span>
                 </a>
-                <!-- Header Navbar: style can be found in header.less -->
-                <nav class="navbar navbar-static-top">
-                    <!-- Sidebar toggle button-->
-                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-
-                    <div class="navbar-custom-menu">
-                        <ul class="nav navbar-nav">
-                        <!-- User Account: style can be found in dropdown.less -->
-                            <li class="dropdown user user-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Alexander Pierce</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- User image -->
-                                    <li class="user-header">
-                                        <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
-
-                                    <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
-                                    </p>
-                                    </li>
-                                    <!-- Menu Footer-->
-                                    <li class="user-footer">
-                                        <div class="pull-left">
-                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                  <a href="#" class="dropdown-item">
+                    <!-- Message Start -->
+                    <div class="media">
+                      <img src="<?php echo site_url('resources/img/user3-128x128.jpg');?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                      <div class="media-body">
+                        <h3 class="dropdown-item-title">
+                          Brad Diesel
+                          <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                        </h3>
+                        <p class="text-sm">Call me whenever you can...</p>
+                        <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                      </div>
                     </div>
-                </nav>
-            </header>
+                    <!-- Message End -->
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">
+                    <!-- Message Start -->
+                    <div class="media">
+                      <img src="<?php echo site_url('resources/img/user3-128x128.jpg');?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                      <div class="media-body">
+                        <h3 class="dropdown-item-title">
+                          John Pierce
+                          <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                        </h3>
+                        <p class="text-sm">I got your message bro</p>
+                        <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                      </div>
+                    </div>
+                    <!-- Message End -->
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">
+                    <!-- Message Start -->
+                    <div class="media">
+                      <img src="<?php echo site_url('resources/img/user3-128x128.jpg');?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                      <div class="media-body">
+                        <h3 class="dropdown-item-title">
+                          Nora Silvester
+                          <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                        </h3>
+                        <p class="text-sm">The subject goes here</p>
+                        <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                      </div>
+                    </div>
+                    <!-- Message End -->
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                </div>
+              </li>
+              <!-- Notifications Dropdown Menu -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                  <i class="far fa-bell"></i>
+                  <span class="badge badge-warning navbar-badge">15</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                  <span class="dropdown-item dropdown-header">15 Notifications</span>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">
+                    <i class="fas fa-envelope mr-2"></i> 4 new messages
+                    <span class="float-right text-muted text-sm">3 mins</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">
+                    <i class="fas fa-users mr-2"></i> 8 friend requests
+                    <span class="float-right text-muted text-sm">12 hours</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">
+                    <i class="fas fa-file mr-2"></i> 3 new reports
+                    <span class="float-right text-muted text-sm">2 days</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                  <i class="fas fa-th-large"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.navbar -->
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="main-sidebar">
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <!-- Brand Logo -->
+                <a href="#" class="brand-link">
+                  <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                       style="opacity: .8">
+                  <span class="brand-text font-weight-light">Deportes Org</span>
+                </a>
                 <!-- sidebar: style can be found in sidebar.less -->
-                <section class="sidebar">
+                    <div class="sidebar">
                     <!-- Sidebar user panel -->
-                    <div class="user-panel">
-                        <div class="pull-left image">
-                            <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
-                        </div>
-                        <div class="pull-left info">
-                            <p>Alexander Pierce</p>
-                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                        </div>
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                      <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                      <a href="#" class="d-block">Usuario</a>
+                    </div>
                     </div>
                     <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <ul class="sidebar-menu">
-                        <li class="header">MAIN NAVIGATION</li>
-                        <li>
-                            <a href="<?php echo site_url();?>">
-                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        
+                        <li class="nav-item">
+                            <a href="<?php echo site_url();?>" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i> <p>Inicio</p>
                             </a>
                         </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Arbitro</span>
+						<li class="nav-item">
+                            <a href="<?php echo site_url('arbitro/index');?>" class="nav-link">
+                                <i class="fas fa-user-shield"></i> <p>Arbitro</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('arbitro/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('arbitro/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
                         </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Arbitro Planilla</span>
+						<!--<li class="nav-item">
+                            <a href="<?php echo site_url('arbitro_planilla/index');?>" class="nav-link">
+                                <i class="fa fa-desktop"></i> <p>Arbitro Planilla</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('arbitro_planilla/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('arbitro_planilla/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
-                        </li>
-						<li>
+                        </li>-->
+						<!--<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Camp Equipo</span>
+                                <i class="fa fa-desktop"></i> <p>Camp Equipo</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('camp_equipo/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -137,140 +219,92 @@
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Campeonato</span>
+                                <i class="fa fa-desktop"></i> <p>Campeonato</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('campeonato/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
                                     <a href="<?php echo site_url('campeonato/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Club Deportivo</span>
+                        </li>-->
+						<li class="nav-item">
+                            <a href="<?php echo site_url('club_deportivo/index');?>" class="nav-link">
+                                <i class="fas fa-shield-virus"></i> <p>Club Deportivo</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('club_deportivo/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('club_deportivo/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
                         </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Delegado</span>
+						<li class="nav-item">
+                            <a href="<?php echo site_url('delegado/index');?>" class="nav-link">
+                                <i class="fas fa-user-edit"></i> <p>Delegado</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('delegado/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('delegado/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
                         </li>
-						<li>
+						<!--<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Email</span>
+                                <i class="fa fa-desktop"></i> <p>Email</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('email/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
                                     <a href="<?php echo site_url('email/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Entrenador</span>
+                        </li>-->
+						<li class="nav-item">
+                            <a href="<?php echo site_url('entrenador/index');?>" class="nav-link">
+                                <i class="fas fa-user-tie"></i> <p>Entrenador</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('entrenador/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('entrenador/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
                         </li>
-						<li>
+						<!--<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Entrenador Equipo</span>
+                                <i class="fa fa-desktop"></i> <p>Entrenador Equipo</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('entrenador_equipo/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
                                     <a href="<?php echo site_url('entrenador_equipo/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Equipo</span>
+                        </li>-->
+						<li class="nav-item">
+                            <a href="<?php echo site_url('equipo/index');?>" class="nav-link">
+                                <i class="fas fa-users"></i> <p>Equipo</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('equipo/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('equipo/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
                         </li>
-						<li>
+						<!--<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Equipo Jugador</span>
+                                <i class="fa fa-desktop"></i> <p>Equipo Jugador</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('equipo_jugador/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
                                     <a href="<?php echo site_url('equipo_jugador/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Fixture</span>
+                        </li>-->
+						<li class="nav-item">
+                            <a href="<?php echo site_url('fixture/index');?>" class="nav-link">
+                                <i class="fas fa-sort-numeric-down"></i> <p>Fixture</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('fixture/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('fixture/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
                         </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Gestion</span>
+						<li class="nav-item">
+                            <a href="<?php echo site_url('gestion/index');?>" class="nav-link">
+                                <i class="far fa-calendar-alt"></i> <p>Gestion</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('gestion/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('gestion/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
                         </li>
-						<li>
+						<!--<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Inf Personal</span>
+                                <i class="fa fa-desktop"></i> <p>Inf Personal</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('inf_personal/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -280,49 +314,41 @@
                         </li>
 						<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Jug Gol</span>
+                                <i class="fa fa-desktop"></i> <p>Jug Gol</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('jug_gol/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
                                     <a href="<?php echo site_url('jug_gol/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
-                        </li>
-						<li>
-                            <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Jugador</span>
+                        </li>-->
+						<li class="nav-item">
+                            <a href="<?php echo site_url('jugador/index');?>" class="nav-link">
+                                <i class="fas fa-walking"></i> <p>Jugador</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
-                                    <a href="<?php echo site_url('jugador/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-								<li>
-                                    <a href="<?php echo site_url('jugador/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-							</ul>
                         </li>
-						<li>
+						<!--<li>
                             <a href="#">
-                                <i class="fa fa-desktop"></i> <span>Jugador Planilla</span>
+                                <i class="fa fa-desktop"></i> <p>Jugador Planilla</p>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('jugador_planilla/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
                                     <a href="<?php echo site_url('jugador_planilla/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
-                        </li>
+                        </li>-->
 						<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Memorandum</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('memorandum/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -334,8 +360,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Mesa Directiva</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('mesa_directiva/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -347,8 +373,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Movimiento</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('movimiento/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -360,8 +386,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Noticium</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('noticium/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -373,8 +399,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Planilla</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('planilla/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -386,8 +412,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Premio</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('premio/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -399,8 +425,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Reunion</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('reunion/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -412,8 +438,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Reunion Delegado</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('reunion_delegado/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -425,8 +451,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Sf Guard User</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('sf_guard_user/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -438,8 +464,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Telefono</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('telefono/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -451,8 +477,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Tipo Campeonato</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('tipo_campeonato/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -464,8 +490,8 @@
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Uniforme</span>
                             </a>
-                            <ul class="treeview-menu">
-								<li class="active">
+                            <ul class="nav nav-treeview">
+								<li class="nav-item">
                                     <a href="<?php echo site_url('uniforme/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
@@ -474,7 +500,8 @@
 							</ul>
                         </li>
                     </ul>
-                </section>
+                    </nav>
+                </div>
                 <!-- /.sidebar -->
             </aside>
 
@@ -520,19 +547,40 @@
         </div>
         <!-- ./wrapper -->
 
-        <!-- jQuery 2.2.3 -->
-        <script src="<?php echo site_url('resources/js/jquery-2.2.3.min.js');?>"></script>
-        <!-- Bootstrap 3.3.6 -->
-        <script src="<?php echo site_url('resources/js/bootstrap.min.js');?>"></script>
-        <!-- FastClick -->
-        <script src="<?php echo site_url('resources/js/fastclick.js');?>"></script>
-        <!-- AdminLTE App -->
-        <script src="<?php echo site_url('resources/js/app.min.js');?>"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="<?php echo site_url('resources/js/demo.js');?>"></script>
-        <!-- DatePicker -->
-        <script src="<?php echo site_url('resources/js/moment.js');?>"></script>
-        <script src="<?php echo site_url('resources/js/bootstrap-datetimepicker.min.js');?>"></script>
-        <script src="<?php echo site_url('resources/js/global.js');?>"></script>
+        
+            <!-- jQuery -->
+            <script src="<?php echo site_url('resources/plugins/jquery/jquery.min.js');?>"></script>
+            <!-- jQuery UI 1.11.4 -->
+            <script src="<?php echo site_url('resources/plugins/jquery-ui/jquery-ui.min.js');?>"></script>
+            <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+            <script>
+              $.widget.bridge('uibutton', $.ui.button)
+            </script>
+            <!-- Bootstrap 4 -->
+            <script src="<?php echo site_url('resources/plugins/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
+            <!-- ChartJS -->
+            <script src="<?php echo site_url('resources/plugins/chart.js/Chart.min.js');?>"></script>
+            <!-- Sparkline -->
+            <script src="<?php echo site_url('resources/plugins/sparklines/sparkline.js');?>"></script>
+            <!-- JQVMap -->
+            <script src="<?php echo site_url('resources/plugins/jqvmap/jquery.vmap.min.js');?>"></script>
+            <script src="<?php echo site_url('resources/plugins/jqvmap/maps/jquery.vmap.usa.js');?>"></script>
+            <!-- jQuery Knob Chart -->
+            <script src="<?php echo site_url('resources/plugins/jquery-knob/jquery.knob.min.js');?>"></script>
+            <!-- daterangepicker -->
+            <script src="<?php echo site_url('resources/plugins/moment/moment.min.js');?>"></script>
+            <script src="<?php echo site_url('resources/plugins/daterangepicker/daterangepicker.js');?>"></script>
+            <!-- Tempusdominus Bootstrap 4 -->
+            <script src="<?php echo site_url('resources/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js');?>"></script>
+            <!-- Summernote -->
+            <script src="<?php echo site_url('resources/plugins/summernote/summernote-bs4.min.js');?>"></script>
+            <!-- overlayScrollbars -->
+            <script src="<?php echo site_url('resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js');?>"></script>
+            <!-- AdminLTE App -->
+            <script src="<?php echo site_url('resources/js/adminlte.js');?>"></script>
+            <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+            <script src="<?php echo site_url('resources/js/pages/dashboard.js');?>"></script>
+            <!-- AdminLTE for demo purposes -->
+            <script src="<?php echo site_url('resources/js/demo.js');?>"></script>
     </body>
 </html>
