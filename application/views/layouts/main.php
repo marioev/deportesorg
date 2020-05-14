@@ -188,115 +188,114 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        
                         <li class="nav-item">
                             <a href="<?php echo site_url();?>" class="nav-link">
-                                <i class="nav-icon fas fa-home"></i> <p>Inicio</p>
+                                <i class="nav-icon fas fa-home fa-fw"></i> <p>Inicio</p>
                             </a>
                         </li>
-						<li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo site_url('arbitro/index');?>" class="nav-link">
-                                <i class="fas fa-user-shield"></i> <p>Arbitro</p>
+                                <i class="fas fa-user-shield fa-fw"></i> <p>Arbitro</p>
                             </a>
                         </li>
-						<!--<li class="nav-item">
-                            <a href="<?php echo site_url('arbitro_planilla/index');?>" class="nav-link">
+                        <!--<li class="nav-item">
+                            <a href="<?php //echo site_url('arbitro_planilla/index');?>" class="nav-link">
                                 <i class="fa fa-desktop"></i> <p>Arbitro Planilla</p>
                             </a>
                         </li>-->
-						<!--<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <p>Camp Equipo</p>
                             </a>
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('camp_equipo/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                <li class="nav-item">
+                                    <a href="<?php //echo site_url('camp_equipo/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('camp_equipo/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('camp_equipo/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
                         </li>
-						<li>
+                        <li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <p>Campeonato</p>
                             </a>
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('campeonato/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                <li class="nav-item">
+                                    <a href="<?php //echo site_url('campeonato/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('campeonato/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('campeonato/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
                         </li>-->
-						<li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo site_url('club_deportivo/index');?>" class="nav-link">
-                                <i class="fas fa-shield-virus"></i> <p>Club Deportivo</p>
+                                <i class="fas fa-shield-virus fa-fw"></i> <p>Club Deportivo</p>
                             </a>
                         </li>
-						<li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo site_url('delegado/index');?>" class="nav-link">
-                                <i class="fas fa-user-edit"></i> <p>Delegado</p>
+                                <i class="fas fa-user-edit fa-fw"></i> <p>Delegado</p>
                             </a>
                         </li>
-						<!--<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <p>Email</p>
                             </a>
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('email/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                <li class="nav-item">
+                                    <a href="<?php //echo site_url('email/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('email/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('email/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
                         </li>-->
-						<li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo site_url('entrenador/index');?>" class="nav-link">
-                                <i class="fas fa-user-tie"></i> <p>Entrenador</p>
+                                <i class="fas fa-user-tie fa-fw"></i> <p>Entrenador</p>
                             </a>
                         </li>
-						<!--<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <p>Entrenador Equipo</p>
                             </a>
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('entrenador_equipo/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                <li class="nav-item">
+                                    <a href="<?php //echo site_url('entrenador_equipo/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('entrenador_equipo/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('entrenador_equipo/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
                         </li>-->
-						<li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo site_url('equipo/index');?>" class="nav-link">
-                                <i class="fas fa-users"></i> <p>Equipo</p>
+                                <i class="fas fa-users fa-fw"></i> <p>Equipo</p>
                             </a>
                         </li>
-						<!--<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <p>Equipo Jugador</p>
                             </a>
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('equipo_jugador/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                <li class="nav-item">
+                                    <a href="<?php //echo site_url('equipo_jugador/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('equipo_jugador/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('equipo_jugador/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
                         </li>-->
-						<li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo site_url('fixture/index');?>" class="nav-link">
-                                <i class="fas fa-sort-numeric-down"></i> <p>Fixture</p>
+                                <i class="fas fa-sort-numeric-down fa-fw"></i> <p>Fixture</p>
                             </a>
                         </li>
-						<li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo site_url('gestion/index');?>" class="nav-link">
-                                <i class="far fa-calendar-alt"></i> <p>Gestion</p>
+                                <i class="far fa-calendar-alt fa-fw"></i> <p>Gestion</p>
                             </a>
                         </li>
 						<!--<li>
@@ -304,172 +303,232 @@
                                 <i class="fa fa-desktop"></i> <p>Inf Personal</p>
                             </a>
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('inf_personal/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                <li class="nav-item">
+                                    <a href="<?php //echo site_url('inf_personal/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('inf_personal/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('inf_personal/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
                         </li>
-						<li>
+                            <li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <p>Jug Gol</p>
                             </a>
+                                <li class="nav-item">
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('jug_gol/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('jug_gol/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('jug_gol/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('jug_gol/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
                         </li>-->
-						<li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo site_url('jugador/index');?>" class="nav-link">
-                                <i class="fas fa-walking"></i> <p>Jugador</p>
+                                <i class="fas fa-walking fa-fw"></i> <p>Jugador</p>
                             </a>
                         </li>
-						<!--<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <p>Jugador Planilla</p>
                             </a>
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('jugador_planilla/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                <li class="nav-item">
+                                    <a href="<?php //echo site_url('jugador_planilla/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('jugador_planilla/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('jugador_planilla/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
                         </li>-->
-						<li>
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('memorandum');?>" class="nav-link">
+                                <i class="fas fa-align-justify fa-fw"></i> <p>Memorandum</p>
+                            </a>
+                        </li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Memorandum</span>
                             </a>
                             <ul class="nav nav-treeview">
-								<li class="nav-item">
-                                    <a href="<?php echo site_url('memorandum/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                <li class="nav-item">
+                                    <a href="<?php //echo site_url('memorandum/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('memorandum/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('memorandum/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
-							</ul>
+                            </ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('mesa_directiva');?>" class="nav-link">
+                                <i class="fas fa-table fa-fw"></i> <p>Mesa Directiva</p>
+                            </a>
                         </li>
-						<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Mesa Directiva</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('mesa_directiva/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('mesa_directiva/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
-								<li>
-                                    <a href="<?php echo site_url('mesa_directiva/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                <li>
+                                    <a href="<?php //echo site_url('mesa_directiva/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('movimiento');?>" class="nav-link">
+                                <i class="fas fa-exchange-alt fa-fw"></i> <p>Movimiento</p>
+                            </a>
                         </li>
-						<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Movimiento</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('movimiento/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('movimiento/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('movimiento/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('movimiento/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('noticium');?>" class="nav-link">
+                                <i class="fas fa-file-invoice fa-fw"></i> <p>Noticia</p>
+                            </a>
                         </li>
-						<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Noticium</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('noticium/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('noticium/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('noticium/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('noticium/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('planilla');?>" class="nav-link">
+                                <i class="fas fa-file-alt fa-fw"></i> <p>Planilla</p>
+                            </a>
                         </li>
-						<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Planilla</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('planilla/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('planilla/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('planilla/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('planilla/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('premio');?>" class="nav-link">
+                                <i class="fas fa-trophy fa-fw"></i> <p>Premio</p>
+                            </a>
                         </li>
-						<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Premio</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('premio/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('premio/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('premio/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('premio/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('reunion');?>" class="nav-link">
+                                <i class="fas fa-handshake fa-fw"></i> <p>Reunion</p>
+                            </a>
                         </li>
-						<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Reunion</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('reunion/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('reunion/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('reunion/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('reunion/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('reunion_delegado');?>" class="nav-link">
+                                <i class="fas fa-compress-arrows-alt fa-fw"></i> <p>Reunion Delegado</p>
+                            </a>
                         </li>
-						<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Reunion Delegado</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('reunion_delegado/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('reunion_delegado/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('reunion_delegado/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('reunion_delegado/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('sf_guard_user');?>" class="nav-link">
+                                <i class="fas fa-users fa-fw"></i> <p>Usuarios</p>
+                            </a>
                         </li>
-						<li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Sf Guard User</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('sf_guard_user/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('sf_guard_user/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('sf_guard_user/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('sf_guard_user/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('telefono');?>" class="nav-link">
+                                <i class="fas fa-phone fa-fw"></i> <p>Telefono</p>
+                            </a>
                         </li>
-						<li>
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('tipo_campeonato');?>" class="nav-link">
+                                <i class="fas fa-tasks fa-fw"></i> <p>Tipo Campeonato</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo site_url('uniforme');?>" class="nav-link">
+                                <i class="fas fa-user-tag fa-fw"></i> <p>Uniforme</p>
+                            </a>
+                        </li>
+                        <!--<li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Telefono</span>
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('telefono/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('telefono/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('telefono/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('telefono/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
                         </li>
@@ -479,10 +538,10 @@
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('tipo_campeonato/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('tipo_campeonato/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('tipo_campeonato/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('tipo_campeonato/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
                         </li>
@@ -492,13 +551,13 @@
                             </a>
                             <ul class="nav nav-treeview">
 								<li class="nav-item">
-                                    <a href="<?php echo site_url('uniforme/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="<?php //echo site_url('uniforme/add');?>"><i class="fa fa-plus"></i> Add</a>
                                 </li>
 								<li>
-                                    <a href="<?php echo site_url('uniforme/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                    <a href="<?php //echo site_url('uniforme/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
 							</ul>
-                        </li>
+                        </li>-->
                     </ul>
                     </nav>
                 </div>
