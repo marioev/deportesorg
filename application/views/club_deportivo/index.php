@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Club Deportivo Listing</h3>
+                <h3 class="box-title">Club Deportivo</h3>
             	<div class="box-tools">
                     <a href="<?php echo site_url('club_deportivo/add'); ?>" class="btn btn-success btn-sm">Add</a> 
                 </div>
