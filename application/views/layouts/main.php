@@ -230,6 +230,11 @@
                             </ul>
                         </li>-->
                         <li class="nav-item">
+                            <a href="<?php echo site_url('campeonato');?>" class="nav-link">
+                                <i class="fas fa-universal-access fa-fw"></i> <p>Campeonato</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="<?php echo site_url('club_deportivo/index');?>" class="nav-link">
                                 <i class="fas fa-shield-virus fa-fw"></i> <p>Club Deportivo</p>
                             </a>

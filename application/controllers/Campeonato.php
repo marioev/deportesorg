@@ -9,6 +9,8 @@ class Campeonato extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('Campeonato_model');
+        $this->load->model('Gestion_model');
+        $this->load->model('Tipo_campeonato_model');
     } 
 
     /*
@@ -27,25 +29,84 @@ class Campeonato extends CI_Controller{
      */
     function add()
     {   
-        if(isset($_POST) && count($_POST) > 0)     
-        {   
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('nombre_camp','Nombre','trim|required', array('required' => 'Este Campo no debe estar vacio'));
+        if($this->form_validation->run())     
+        {
+            /* *********************INICIO imagen***************************** */
+            $foto="";
+            if (!empty($_FILES['archivo_camp']['name'])){
+                $this->load->library('image_lib');
+                $config['upload_path'] = './resources/images/campeonato/';
+                $img_full_path = $config['upload_path'];
+
+                //$config['allowed_types'] = 'gif|jpeg|jpg|png';
+                $config['allowed_types'] = '*';
+                $config['image_library'] = 'gd2';
+                $config['max_size'] = 0;
+                $config['max_width'] = 0;
+                $config['max_height'] = 0;
+
+                $new_name = time(); //str_replace(" ", "_", $this->input->post('proveedor_nombre'));
+                $config['file_name'] = $new_name; //.$extencion;
+                $config['file_ext_tolower'] = TRUE;
+
+                $this->load->library('upload', $config);
+                $this->upload->do_upload('archivo_camp');
+
+                $img_data = $this->upload->data();
+                $extension = $img_data['file_ext'];
+                /* ********************INICIO para resize***************************** */
+                if ($img_data['file_ext'] == ".jpg" || $img_data['file_ext'] == ".png" || $img_data['file_ext'] == ".jpeg" || $img_data['file_ext'] == ".gif") {
+                    $conf['image_library'] = 'gd2';
+                    $conf['source_image'] = $img_data['full_path'];
+                    $conf['new_image'] = './resources/images/campeonato/';
+                    $conf['maintain_ratio'] = TRUE;
+                    $conf['create_thumb'] = FALSE;
+                    $conf['width'] = 800;
+                    $conf['height'] = 600;
+                    $this->image_lib->clear();
+                    $this->image_lib->initialize($conf);
+                    if(!$this->image_lib->resize()){
+                        echo $this->image_lib->display_errors('','');
+                    }
+                    $confi['image_library'] = 'gd2';
+                    $confi['source_image'] = './resources/images/campeonato/'.$new_name.$extension;
+                    $confi['new_image'] = './resources/images/campeonato/'."thumb_".$new_name.$extension;
+                    $confi['create_thumb'] = FALSE;
+                    $confi['maintain_ratio'] = TRUE;
+                    $confi['width'] = 50;
+                    $confi['height'] = 50;
+
+                    $this->image_lib->clear();
+                    $this->image_lib->initialize($confi);
+                    $this->image_lib->resize();
+                }
+                /* ********************F I N  para resize***************************** */
+                
+                $foto = $new_name.$extension;
+            }
+            /* *********************FIN imagen***************************** */
+            $estado = "ACTIVO";
             $params = array(
-				'id_gestion' => $this->input->post('id_gestion'),
-				'id_tipo_camp' => $this->input->post('id_tipo_camp'),
-				'nombre_camp' => $this->input->post('nombre_camp'),
-				'archivo_camp' => $this->input->post('archivo_camp'),
-				'fecha_ini_camp' => $this->input->post('fecha_ini_camp'),
-				'fecha_fin_camp' => $this->input->post('fecha_fin_camp'),
-				'estado_camp' => $this->input->post('estado_camp'),
-				'descripcion_camp' => $this->input->post('descripcion_camp'),
-				'convocatoria_camp' => $this->input->post('convocatoria_camp'),
+                'id_gestion' => $this->input->post('id_gestion'),
+                'id_tipo_camp' => $this->input->post('id_tipo_camp'),
+                'nombre_camp' => $this->input->post('nombre_camp'),
+                'archivo_camp' => $foto,
+                'fecha_ini_camp' => $this->input->post('fecha_ini_camp'),
+                'fecha_fin_camp' => $this->input->post('fecha_fin_camp'),
+                'estado_camp' => $estado,
+                //'descripcion_camp' => $this->input->post('descripcion_camp'),
+                'convocatoria_camp' => $this->input->post('convocatoria_camp'),
             );
             
             $campeonato_id = $this->Campeonato_model->add_campeonato($params);
             redirect('campeonato/index');
         }
         else
-        {            
+        {
+            $data['all_gestion']         = $this->Gestion_model->get_all_gestion_activo();
+            $data['all_tipo_campeonato'] = $this->Tipo_campeonato_model->get_all_tipo_campeonato_activo();
             $data['_view'] = 'campeonato/add';
             $this->load->view('layouts/main',$data);
         }
@@ -61,18 +122,88 @@ class Campeonato extends CI_Controller{
         
         if(isset($data['campeonato']['id_camp']))
         {
-            if(isset($_POST) && count($_POST) > 0)     
-            {   
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('nombre_camp','Nombre','trim|required', array('required' => 'Este Campo no debe estar vacio'));
+            if($this->form_validation->run())     
+            {
+                /* *********************INICIO imagen***************************** */
+                $foto="";
+                    $foto1= $this->input->post('archivo_camp1');
+                if (!empty($_FILES['archivo_camp']['name']))
+                {
+                    $this->load->library('image_lib');
+                    $config['upload_path'] = './resources/images/campeonato/';
+                    //$config['allowed_types'] = 'gif|jpeg|jpg|png';
+                    $config['allowed_types'] = '*';
+                    $config['max_size'] = 0;
+                    $config['max_width'] = 0;
+                    $config['max_height'] = 0;
+
+                    $new_name = time();
+                    $config['file_name'] = $new_name; //.$extencion;
+                    $config['file_ext_tolower'] = TRUE;
+
+                    $this->load->library('upload', $config);
+                    $this->upload->do_upload('archivo_camp');
+
+                    $img_data = $this->upload->data();
+                    $extension = $img_data['file_ext'];
+                    /* ********************INICIO para resize***************************** */
+                    if($img_data['file_ext'] == ".jpg" || $img_data['file_ext'] == ".png" || $img_data['file_ext'] == ".jpeg" || $img_data['file_ext'] == ".gif") {
+                        $conf['image_library'] = 'gd2';
+                        $conf['source_image'] = $img_data['full_path'];
+                        $conf['new_image'] = './resources/images/campeonato/';
+                        $conf['maintain_ratio'] = TRUE;
+                        $conf['create_thumb'] = FALSE;
+                        $conf['width'] = 800;
+                        $conf['height'] = 600;
+                        $this->image_lib->clear();
+                        $this->image_lib->initialize($conf);
+                        if(!$this->image_lib->resize()){
+                            echo $this->image_lib->display_errors('','');
+                        }
+                        
+                        $confi['image_library'] = 'gd2';
+                        $confi['source_image'] = './resources/images/campeonato/'.$new_name.$extension;
+                        $confi['new_image'] = './resources/images/campeonato/'."thumb_".$new_name.$extension;
+                        $confi['create_thumb'] = FALSE;
+                        $confi['maintain_ratio'] = TRUE;
+                        $confi['width'] = 50;
+                        $confi['height'] = 50;
+
+                        $this->image_lib->clear();
+                        $this->image_lib->initialize($confi);
+                        $this->image_lib->resize();
+                    }
+                    /* ********************F I N  para resize***************************** */
+                    //$directorio = base_url().'resources/imagenes/';
+                    $directorio = FCPATH.'resources\images\campeonato\\';
+                    //$directorio = $_SERVER['DOCUMENT_ROOT'].'/ximpleman_web/resources/images/productos/';
+                    if(isset($foto1) && !empty($foto1)){
+                      if(file_exists($directorio.$foto1)){
+                          unlink($directorio.$foto1);
+                          $mimagenthumb = "thumb_".$foto1;
+                          //$mimagenthumb = str_replace(".", "_thumb.", $foto1);
+                          if($img_data['file_ext'] == ".jpg" || $img_data['file_ext'] == ".png" || $img_data['file_ext'] == ".jpeg" || $img_data['file_ext'] == ".gif") {
+                              unlink($directorio.$mimagenthumb);
+                          }
+                      }
+                  }
+                    $foto = $new_name.$extension;
+                }else{
+                    $foto = $foto1;
+                }
+                /* *********************FIN imagen***************************** */
                 $params = array(
-					'id_gestion' => $this->input->post('id_gestion'),
-					'id_tipo_camp' => $this->input->post('id_tipo_camp'),
-					'nombre_camp' => $this->input->post('nombre_camp'),
-					'archivo_camp' => $this->input->post('archivo_camp'),
-					'fecha_ini_camp' => $this->input->post('fecha_ini_camp'),
-					'fecha_fin_camp' => $this->input->post('fecha_fin_camp'),
-					'estado_camp' => $this->input->post('estado_camp'),
-					'descripcion_camp' => $this->input->post('descripcion_camp'),
-					'convocatoria_camp' => $this->input->post('convocatoria_camp'),
+                    'id_gestion' => $this->input->post('id_gestion'),
+                    'id_tipo_camp' => $this->input->post('id_tipo_camp'),
+                    'nombre_camp' => $this->input->post('nombre_camp'),
+                    'archivo_camp' => $foto,
+                    'fecha_ini_camp' => $this->input->post('fecha_ini_camp'),
+                    'fecha_fin_camp' => $this->input->post('fecha_fin_camp'),
+                    'estado_camp' => $this->input->post('estado_camp'),
+                    //'descripcion_camp' => $this->input->post('descripcion_camp'),
+                    'convocatoria_camp' => $this->input->post('convocatoria_camp'),
                 );
 
                 $this->Campeonato_model->update_campeonato($id_camp,$params);            
@@ -80,6 +211,8 @@ class Campeonato extends CI_Controller{
             }
             else
             {
+                $data['all_gestion']         = $this->Gestion_model->get_all_gestion_activo();
+                $data['all_tipo_campeonato'] = $this->Tipo_campeonato_model->get_all_tipo_campeonato_activo();
                 $data['_view'] = 'campeonato/edit';
                 $this->load->view('layouts/main',$data);
             }
