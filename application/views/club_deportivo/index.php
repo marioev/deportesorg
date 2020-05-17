@@ -10,7 +10,7 @@
             <div class="box-body">
                 <table class="table table-striped">
                     <tr>
-						<th>Id Club</th>
+						<th>Nº</th>
 						<th>NOMBRE</th>
 						<th>FUNDACION</th>
 						<th>TELEFONO</th>

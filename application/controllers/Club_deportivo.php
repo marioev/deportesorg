@@ -29,11 +29,12 @@ class Club_deportivo extends CI_Controller{
     {   
         if(isset($_POST) && count($_POST) > 0)     
         {   
+            $estado = "ACTIVO";
             $params = array(
 				'nombre_club' => $this->input->post('nombre_club'),
 				'fundacion_club' => $this->input->post('fundacion_club'),
 				'telef_club' => $this->input->post('telef_club'),
-				'estado_club' => $this->input->post('estado_club'),
+				'estado_club' => $estado,
 				'direccion_club' => $this->input->post('direccion_club'),
             );
             

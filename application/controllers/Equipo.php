@@ -29,10 +29,11 @@ class Equipo extends CI_Controller{
     {   
         if(isset($_POST) && count($_POST) > 0)     
         {   
+            $estado = "ACTIVO";
             $params = array(
 				'id_club' => $this->input->post('id_club'),
 				'nombre_equipo' => $this->input->post('nombre_equipo'),
-				'estado_equipo' => $this->input->post('estado_equipo'),
+				'estado_equipo' => $estado,
             );
             
             $equipo_id = $this->Equipo_model->add_equipo($params);
