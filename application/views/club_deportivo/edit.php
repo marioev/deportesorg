@@ -16,7 +16,7 @@
 					<div class="col-md-6">
 						<label for="fundacion_club" class="control-label">Fundacion Club</label>
 						<div class="form-group">
-							<input type="text" name="fundacion_club" value="<?php echo ($this->input->post('fundacion_club') ? $this->input->post('fundacion_club') : $club_deportivo['fundacion_club']); ?>" class="form-control" id="fundacion_club" />
+							<input type="date" name="fundacion_club" value="<?php echo ($this->input->post('fundacion_club') ? $this->input->post('fundacion_club') : $club_deportivo['fundacion_club']); ?>" class="form-control" id="fundacion_club" />
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -41,9 +41,11 @@
 			</div>
 			<div class="box-footer">
             	<button type="submit" class="btn btn-success">
-					<i class="fa fa-check"></i> Save
-				</button>
-	        </div>				
+                    <i class="fa fa-check"></i> Guardar
+            	</button>
+                <a href="<?php echo site_url('club_deportivo'); ?>" class="btn btn-danger">
+                    <i class="fa fa-times"></i> Cancelar</a>
+          	</div>				
 			<?php echo form_close(); ?>
 		</div>
     </div>
