@@ -27,13 +27,17 @@ class Gestion extends CI_Controller{
      */
     function add()
     {   
-        if(isset($_POST) && count($_POST) > 0)     
-        {   
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('nombre_gestion','Nombre','trim|required', array('required' => 'Este Campo no debe estar vacio'));
+        if($this->form_validation->run())     
+        {
+            $estado_gestion = "ACTIVO";
             $params = array(
-				'nombre_gestion' => $this->input->post('nombre_gestion'),
-				'estado_ges' => $this->input->post('estado_ges'),
+                'nombre_gestion' => $this->input->post('nombre_gestion'),
+                'inicio_gestion' => $this->input->post('inicio_gestion'),
+                'fin_gestion'    => $this->input->post('fin_gestion'),
+                'estado_gestion' => $estado_gestion,
             );
-            
             $gestion_id = $this->Gestion_model->add_gestion($params);
             redirect('gestion/index');
         }
@@ -54,13 +58,16 @@ class Gestion extends CI_Controller{
         
         if(isset($data['gestion']['id_gestion']))
         {
-            if(isset($_POST) && count($_POST) > 0)     
-            {   
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('nombre_gestion','Nombre','trim|required', array('required' => 'Este Campo no debe estar vacio'));
+            if($this->form_validation->run())     
+            {
                 $params = array(
-					'nombre_gestion' => $this->input->post('nombre_gestion'),
-					'estado_ges' => $this->input->post('estado_ges'),
+                    'nombre_gestion' => $this->input->post('nombre_gestion'),
+                    'inicio_gestion' => $this->input->post('inicio_gestion'),
+                    'fin_gestion'    => $this->input->post('fin_gestion'),
+                    'estado_gestion' => $this->input->post('estado_gestion'),
                 );
-
                 $this->Gestion_model->update_gestion($id_gestion,$params);            
                 redirect('gestion/index');
             }
@@ -77,7 +84,7 @@ class Gestion extends CI_Controller{
     /*
      * Deleting gestion
      */
-    function remove($id_gestion)
+    /*function remove($id_gestion)
     {
         $gestion = $this->Gestion_model->get_gestion($id_gestion);
 
@@ -89,6 +96,6 @@ class Gestion extends CI_Controller{
         }
         else
             show_error('The gestion you are trying to delete does not exist.');
-    }
+    }*/
     
 }

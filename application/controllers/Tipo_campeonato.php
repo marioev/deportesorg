@@ -27,11 +27,14 @@ class Tipo_campeonato extends CI_Controller{
      */
     function add()
     {   
-        if(isset($_POST) && count($_POST) > 0)     
-        {   
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('nombre_tipo_camp','Nombre','trim|required', array('required' => 'Este Campo no debe estar vacio'));
+        if($this->form_validation->run())     
+        {
+            $estado = "ACTIVO";
             $params = array(
-				'nombre_tipo_camp' => $this->input->post('nombre_tipo_camp'),
-				'estado_tipo_camp' => $this->input->post('estado_tipo_camp'),
+                'nombre_tipo_camp' => $this->input->post('nombre_tipo_camp'),
+                'estado_tipo_camp' => $estado,
             );
             
             $tipo_campeonato_id = $this->Tipo_campeonato_model->add_tipo_campeonato($params);
@@ -54,11 +57,13 @@ class Tipo_campeonato extends CI_Controller{
         
         if(isset($data['tipo_campeonato']['id_tipo_camp']))
         {
-            if(isset($_POST) && count($_POST) > 0)     
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('nombre_tipo_camp','Nombre','trim|required', array('required' => 'Este Campo no debe estar vacio'));
+            if($this->form_validation->run())     
             {   
                 $params = array(
-					'nombre_tipo_camp' => $this->input->post('nombre_tipo_camp'),
-					'estado_tipo_camp' => $this->input->post('estado_tipo_camp'),
+                    'nombre_tipo_camp' => $this->input->post('nombre_tipo_camp'),
+                    'estado_tipo_camp' => $this->input->post('estado_tipo_camp'),
                 );
 
                 $this->Tipo_campeonato_model->update_tipo_campeonato($id_tipo_camp,$params);            
@@ -77,7 +82,7 @@ class Tipo_campeonato extends CI_Controller{
     /*
      * Deleting tipo_campeonato
      */
-    function remove($id_tipo_camp)
+    /*function remove($id_tipo_camp)
     {
         $tipo_campeonato = $this->Tipo_campeonato_model->get_tipo_campeonato($id_tipo_camp);
 
@@ -89,6 +94,6 @@ class Tipo_campeonato extends CI_Controller{
         }
         else
             show_error('The tipo_campeonato you are trying to delete does not exist.');
-    }
+    }*/
     
 }

@@ -53,4 +53,13 @@ class Gestion_model extends CI_Model
     {
         return $this->db->delete('gestion',array('id_gestion'=>$id_gestion));
     }
+    /*
+     * Get all gestion con su estado activo
+     */
+    function get_all_gestion_activo()
+    {
+        $this->db->where('estado_gestion',"ACTIVO");
+        $this->db->order_by('id_gestion', 'desc');
+        return $this->db->get('gestion')->result_array();
+    }
 }

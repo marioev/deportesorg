@@ -53,4 +53,13 @@ class Tipo_campeonato_model extends CI_Model
     {
         return $this->db->delete('tipo_campeonato',array('id_tipo_camp'=>$id_tipo_camp));
     }
+    /*
+     * Get all tipo_campeonato con estado activo
+     */
+    function get_all_tipo_campeonato_activo()
+    {
+        $this->db->where('estado_tipo_camp',"ACTIVO");
+        $this->db->order_by('id_tipo_camp', 'desc');
+        return $this->db->get('tipo_campeonato')->result_array();
+    }
 }

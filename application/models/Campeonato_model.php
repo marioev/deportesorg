@@ -24,8 +24,12 @@ class Campeonato_model extends CI_Model
      */
     function get_all_campeonato()
     {
-        $this->db->order_by('id_camp', 'desc');
-        return $this->db->get('campeonato')->result_array();
+        $this->db->select('c.*, g.nombre_gestion, tc.nombre_tipo_camp');
+        $this->db->from('campeonato c');
+        $this->db->join('gestion g', 'g.id_gestion = c.id_gestion', 'left');
+        $this->db->join('tipo_campeonato tc', 'tc.id_tipo_camp = c.id_tipo_camp', 'left');
+        $this->db->order_by('c.id_camp', 'desc');
+        return $this->db->get()->result_array();
     }
         
     /*
