@@ -4,19 +4,19 @@
             <div class="box-header">
                 <h3 class="box-title">Club Deportivo</h3>
             	<div class="box-tools">
-                    <a href="<?php echo site_url('club_deportivo/add'); ?>" class="btn btn-success btn-sm">Add</a> 
+                    <a href="<?php echo site_url('club_deportivo/add'); ?>" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>  Registrar</a> 
                 </div>
             </div>
             <div class="box-body">
                 <table class="table table-striped">
                     <tr>
-						<th>Id Club</th>
-						<th>Nombre Club</th>
-						<th>Fundacion Club</th>
-						<th>Telef Club</th>
-						<th>Estado Club</th>
-						<th>Direccion Club</th>
-						<th>Actions</th>
+						<th>Nº</th>
+						<th>NOMBRE</th>
+						<th>FUNDACION</th>
+						<th>TELEFONO</th>
+						<th>ESTADO</th>
+						<th>DIRECCION</th>
+						<th></th>
                     </tr>
                     <?php foreach($club_deportivo as $c){ ?>
                     <tr>
@@ -27,8 +27,8 @@
 						<td><?php echo $c['estado_club']; ?></td>
 						<td><?php echo $c['direccion_club']; ?></td>
 						<td>
-                            <a href="<?php echo site_url('club_deportivo/edit/'.$c['id_club']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
-                            <a href="<?php echo site_url('club_deportivo/remove/'.$c['id_club']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
+                            <a href="<?php echo site_url('club_deportivo/edit/'.$c['id_club']); ?>" class="btn btn-info btn-xs"><span class="fa fa-edit"></span></a> 
+                            <a href="<?php echo site_url('club_deportivo/remove/'.$c['id_club']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span></a>
                         </td>
                     </tr>
                     <?php } ?>
