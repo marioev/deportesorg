@@ -492,7 +492,7 @@
 							</ul>
                         </li>-->
                         <li class="nav-item">
-                            <a href="<?php echo site_url('sf_guard_user');?>" class="nav-link">
+                            <a href="<?php echo site_url('usuario');?>" class="nav-link">
                                 <i class="fas fa-users fa-fw"></i> <p>Usuarios</p>
                             </a>
                         </li>
